@@ -118,3 +118,4 @@ nav:
   - 試験情報:
     - 試験概要: exam_info/overview.md
     - 学習計画・進捗: exam_info/study_plan.md
+  - このサイトの仕組み: setup_guide.md
