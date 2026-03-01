@@ -80,9 +80,11 @@ $$\begin{pmatrix}X\\Y\\Z\end{pmatrix} \sim N\!\left(\begin{pmatrix}1\\2\\3\end{p
     変換行列：$A = \begin{pmatrix}1&1&0\\0&1&-1\end{pmatrix}$
 
     **平均の計算**：
+
     $$A\boldsymbol{\mu} = \begin{pmatrix}1&1&0\\0&1&-1\end{pmatrix}\begin{pmatrix}1\\2\\3\end{pmatrix} = \begin{pmatrix}3\\-1\end{pmatrix}$$
 
     **分散共分散行列の計算**：
+
     $$A\boldsymbol{\Sigma} = \begin{pmatrix}1&1&0\\0&1&-1\end{pmatrix}\begin{pmatrix}2&0&1\\0&3&2\\1&2&4\end{pmatrix} = \begin{pmatrix}2&3&3\\-1&1&-2\end{pmatrix}$$
 
     $$A\boldsymbol{\Sigma}A^\top = \begin{pmatrix}2&3&3\\-1&1&-2\end{pmatrix}\begin{pmatrix}1&0\\1&1\\0&-1\end{pmatrix} = \begin{pmatrix}5&0\\0&3\end{pmatrix}$$
@@ -105,11 +107,13 @@ $$\begin{pmatrix}X\\Y\\Z\end{pmatrix} \sim N\!\left(\begin{pmatrix}1\\2\\3\end{p
     $$\boldsymbol{\Sigma}_{11}^{-1} = \begin{pmatrix}1/2&0\\0&1/3\end{pmatrix}$$
 
     **条件付き平均**：
+
     $$\mu_{Z|x,y} = 3 + (1,\ 2)\begin{pmatrix}1/2&0\\0&1/3\end{pmatrix}\begin{pmatrix}x-1\\y-2\end{pmatrix}$$
 
     $$= 3 + \frac{1}{2}(x-1) + \frac{2}{3}(y-2) = \frac{x}{2} + \frac{2y}{3} + \frac{7}{6}$$
 
     **条件付き分散**：
+
     $$\sigma^2_{Z|x,y} = 4 - (1,\ 2)\begin{pmatrix}1/2&0\\0&1/3\end{pmatrix}\begin{pmatrix}1\\2\end{pmatrix} = 4 - \left(\frac{1}{2}+\frac{4}{3}\right) = 4 - \frac{11}{6} = \frac{13}{6}$$
 
     よって $Z \mid X=x, Y=y \sim N\!\left(\dfrac{x}{2}+\dfrac{2y}{3}+\dfrac{7}{6},\ \dfrac{13}{6}\right)$ → **③**

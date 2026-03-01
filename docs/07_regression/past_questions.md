@@ -9,6 +9,7 @@
 ??? success "解答・解説を見る"
 
     **正解**:
+
     $$\hat{\beta}_1 = \frac{\sum_{i=1}^n (x_i - \bar{x})(Y_i - \bar{Y})}{\sum_{i=1}^n (x_i - \bar{x})^2} = \frac{S_{xy}}{S_{xx}}$$
 
     ### 導出

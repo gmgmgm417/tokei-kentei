@@ -29,6 +29,7 @@
     対数尤度関数 $\ell(\theta) = \log L(\theta) = \sum_{i=1}^n \log f(x_i; \theta)$ を最大化する $\hat{\theta}$ を最尤推定量という。
 
     **尤度方程式**:
+
     $$\frac{\partial \ell(\theta)}{\partial \theta} = 0$$
 
 !!! example "正規分布のMLE"
