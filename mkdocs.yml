@@ -1,0 +1,120 @@
+site_name: 統計検定準1級 学習ノート
+site_description: 統計検定準1級の過去問・予想問題・重要概念まとめ
+docs_dir: docs
+site_dir: site
+
+theme:
+  name: material
+  language: ja
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: ダークモードに切り替え
+    - scheme: slate
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: ライトモードに切り替え
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
+    - toc.follow
+    - content.code.copy
+    - content.tabs.link
+  font:
+    text: Noto Sans JP
+    code: JetBrains Mono
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.details
+  - admonition
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - tables
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.keys
+  - footnotes
+  - def_list
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+      title: 目次
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - stylesheets/extra.css
+
+plugins:
+  - search:
+      lang: ja
+      separator: '[\s\-\.]+'
+  - minify:
+      minify_html: true
+
+nav:
+  - ホーム: index.md
+  - 確率論:
+    - 概要: 01_probability/index.md
+    - 重要概念・公式: 01_probability/concepts.md
+    - 過去問: 01_probability/past_questions.md
+    - 練習問題: 01_probability/practice.md
+  - 統計的推測:
+    - 概要: 02_statistical_inference/index.md
+    - 重要概念・公式: 02_statistical_inference/concepts.md
+    - 過去問: 02_statistical_inference/past_questions.md
+    - 練習問題: 02_statistical_inference/practice.md
+  - 多変量解析:
+    - 概要: 03_multivariate/index.md
+    - 重要概念・公式: 03_multivariate/concepts.md
+    - 過去問: 03_multivariate/past_questions.md
+    - 練習問題: 03_multivariate/practice.md
+  - 時系列解析:
+    - 概要: 04_time_series/index.md
+    - 重要概念・公式: 04_time_series/concepts.md
+    - 過去問: 04_time_series/past_questions.md
+    - 練習問題: 04_time_series/practice.md
+  - ベイズ統計:
+    - 概要: 05_bayesian/index.md
+    - 重要概念・公式: 05_bayesian/concepts.md
+    - 過去問: 05_bayesian/past_questions.md
+    - 練習問題: 05_bayesian/practice.md
+  - 線形モデル:
+    - 概要: 06_linear_models/index.md
+    - 重要概念・公式: 06_linear_models/concepts.md
+    - 過去問: 06_linear_models/past_questions.md
+    - 練習問題: 06_linear_models/practice.md
+  - 回帰分析:
+    - 概要: 07_regression/index.md
+    - 重要概念・公式: 07_regression/concepts.md
+    - 過去問: 07_regression/past_questions.md
+    - 練習問題: 07_regression/practice.md
+  - 公式チートシート: formulas/cheatsheet.md
+  - 試験情報:
+    - 試験概要: exam_info/overview.md
+    - 学習計画・進捗: exam_info/study_plan.md

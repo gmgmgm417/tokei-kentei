@@ -1,0 +1,64 @@
+/* ============================================
+   モバイル・通勤向け最適化スタイル
+   ============================================ */
+
+/* モバイルでのタップ対象を大きくする */
+@media screen and (max-width: 76.1875em) {
+  .md-nav__link {
+    padding: 0.625rem 1.2rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* 問題カードに視覚的な重みを持たせる */
+.md-typeset details {
+  border-radius: 8px;
+  margin: 1.5rem 0;
+}
+
+/* 折りたたみQ&Aのタップ領域を広くする */
+.md-typeset details > summary {
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(99, 102, 241, 0.2);
+}
+
+/* 小画面での数式のはみ出し対策 */
+.md-typeset .arithmatex {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 0.5rem 0;
+}
+
+/* 難易度表示の色 */
+.difficulty-high   { color: #e53e3e; font-weight: bold; }
+.difficulty-medium { color: #d69e2e; font-weight: bold; }
+.difficulty-low    { color: #38a169; font-weight: bold; }
+
+/* ダークモードでのadmonitionのコントラスト改善 */
+[data-md-color-scheme="slate"] .md-typeset .admonition {
+  border-left-width: 4px;
+}
+
+/* モバイルでのテーブルのはみ出し対策 */
+.md-typeset table {
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* デスクトップでの数式参照をスティッキーに */
+@media screen and (min-width: 76.1875em) {
+  .md-sidebar--secondary {
+    position: sticky;
+    top: 3.8rem;
+  }
+}
+
+/* 問題番号のスタイル */
+.md-typeset h2 {
+  border-bottom: 2px solid var(--md-primary-fg-color);
+  padding-bottom: 0.3rem;
+}
