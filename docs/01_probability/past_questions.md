@@ -34,6 +34,7 @@
 
     全確率の定理で分母を計算：
     $$P(T) = P(T \mid D)P(D) + P(T \mid D^c)P(D^c)$$
+
     $$= 0.90 \times 0.01 + 0.05 \times 0.99 = 0.009 + 0.0495 = 0.0585$$
 
     ベイズの定理を適用：
@@ -165,7 +166,9 @@ $$P(C) = 0.45, \quad P(A \cap C) = 0.2, \quad P(B \cap C) = 0.1, \quad P(A \cap 
 
     加法定理に代入：
     $$P(A \cup B) = P(A) + P(B) - P(A \cap B)$$
+
     $$0.65 = 0.45 + P(B) - 0.5 \cdot P(B) = 0.45 + 0.5 \cdot P(B)$$
+
     $$P(B) = \frac{0.20}{0.5} = 0.40$$
 
     ---
@@ -178,6 +181,7 @@ $$P(C) = 0.45, \quad P(A \cap C) = 0.2, \quad P(B \cap C) = 0.1, \quad P(A \cap 
 
     3事象の加法定理：
     $$P(A \cup B \cup C) = P(A) + P(B) + P(C) - P(A \cap B) - P(A \cap C) - P(B \cap C) + P(A \cap B \cap C)$$
+
     $$= 0.45 + 0.40 + 0.45 - 0.20 - 0.20 - 0.10 + 0.05 = \mathbf{0.85}$$
 
     !!! tip "試験対策"

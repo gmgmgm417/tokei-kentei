@@ -50,6 +50,7 @@
 
 !!! info "共分散と相関係数"
     $$\text{Cov}(X, Y) = E[XY] - E[X]E[Y]$$
+
     $$\rho(X, Y) = \frac{\text{Cov}(X, Y)}{\sqrt{\text{Var}(X) \cdot \text{Var}(Y)}}$$
 
 ---

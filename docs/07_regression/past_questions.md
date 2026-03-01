@@ -17,6 +17,7 @@
 
     正規方程式:
     $$\frac{\partial Q}{\partial \beta_0} = -2\sum(Y_i - \hat{\beta}_0 - \hat{\beta}_1 x_i) = 0$$
+
     $$\frac{\partial Q}{\partial \beta_1} = -2\sum x_i(Y_i - \hat{\beta}_0 - \hat{\beta}_1 x_i) = 0$$
 
     1式目から $\hat{\beta}_0 = \bar{Y} - \hat{\beta}_1\bar{x}$

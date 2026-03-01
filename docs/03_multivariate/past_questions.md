@@ -106,6 +106,7 @@ $$\begin{pmatrix}X\\Y\\Z\end{pmatrix} \sim N\!\left(\begin{pmatrix}1\\2\\3\end{p
 
     **条件付き平均**：
     $$\mu_{Z|x,y} = 3 + (1,\ 2)\begin{pmatrix}1/2&0\\0&1/3\end{pmatrix}\begin{pmatrix}x-1\\y-2\end{pmatrix}$$
+
     $$= 3 + \frac{1}{2}(x-1) + \frac{2}{3}(y-2) = \frac{x}{2} + \frac{2y}{3} + \frac{7}{6}$$
 
     **条件付き分散**：
