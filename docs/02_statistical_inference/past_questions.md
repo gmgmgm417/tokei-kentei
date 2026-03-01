@@ -85,3 +85,56 @@ $n = 25$ の標本から $\bar{X} = 10$、$S = 4$ を得た。$\mu$ の95%信頼
     !!! warning "よくある間違い"
         母分散が未知のとき $z$ 分布ではなく $t$ 分布を使う（$n$ が小さいとき特に重要）。
         自由度は $n-1 = 24$（$n$ ではない）。
+
+---
+
+## 問題 I1-004 (応用) ：指数分布の分散の最尤推定・漸近分散
+
+> **出典**: 統計検定準1級 2021年6月 第2問（表現を改変）
+
+$n$ 台の機器の稼働時間 $X_1, \ldots, X_n$ が、互いに独立に平均 $\lambda$ の指数分布に従うとする。確率密度関数は：
+$$f(x) = \frac{1}{\lambda}e^{-x/\lambda}, \quad x \geq 0$$
+
+(1) $X_i$ の分散 $\theta = V(X_i)$ を $\lambda$ の関数として表せ。
+
+(2) (1) の分散 $\theta$ の最尤推定量 $\hat{\theta}$ を求めよ。
+
+(3) (2) の最尤推定量の漸近分散 $\displaystyle\lim_{n \to \infty} V\!\left(\sqrt{n}(\hat{\theta} - \theta)\right)$ を $\lambda$ の関数として表せ。
+
+??? success "解答・解説を見る"
+
+    **(1)** $\theta = \lambda^2$
+
+    平均 $\lambda$ の指数分布では $E[X] = \lambda$、$E[X^2] = 2\lambda^2$ なので：
+    $$\theta = V(X) = E[X^2] - (E[X])^2 = 2\lambda^2 - \lambda^2 = \lambda^2$$
+
+    ---
+
+    **(2)** $\hat{\theta} = \bar{X}^2$
+
+    まず $\lambda$ の MLE を求める。対数尤度：
+    $$\ell(\lambda) = -n\log\lambda - \frac{1}{\lambda}\sum_{i=1}^n x_i$$
+
+    尤度方程式：
+    $$\frac{d\ell}{d\lambda} = -\frac{n}{\lambda} + \frac{\sum x_i}{\lambda^2} = 0 \implies \hat{\lambda} = \bar{X}$$
+
+    MLE の不変性より：
+    $$\hat{\theta} = \hat{\lambda}^2 = \bar{X}^2$$
+
+    ---
+
+    **(3)** $4\lambda^4$
+
+    フィッシャー情報量を求める：
+    $$\frac{\partial^2 \log f}{\partial \lambda^2} = \frac{1}{\lambda^2} - \frac{2x}{\lambda^3}$$
+    $$I(\lambda) = -E\!\left[\frac{\partial^2 \log f}{\partial \lambda^2}\right] = -\frac{1}{\lambda^2} + \frac{2\lambda}{\lambda^3} = \frac{1}{\lambda^2}$$
+
+    $\theta = g(\lambda) = \lambda^2$、$g'(\lambda) = 2\lambda$ としてデルタ法を適用：
+    $$\lim_{n\to\infty} V\!\left(\sqrt{n}(\hat{\theta}-\theta)\right) = \frac{(g'(\lambda))^2}{I(\lambda)} = \frac{(2\lambda)^2}{1/\lambda^2} = 4\lambda^2 \cdot \lambda^2 = \mathbf{4\lambda^4}$$
+
+    !!! tip "デルタ法の公式"
+        $\sqrt{n}(g(\hat{\lambda}) - g(\lambda)) \xrightarrow{d} N\!\left(0, \dfrac{(g'(\lambda))^2}{I(\lambda)}\right)$
+
+    !!! warning "よくある間違い"
+        $\hat{\theta} = \bar{X}^2$ は**不偏推定量ではない**（$E[\bar{X}^2] = \lambda^2 + \lambda^2/n \neq \lambda^2$）。
+        ただし一致推定量（$n \to \infty$ で真値に収束）ではある。
