@@ -147,6 +147,7 @@ $E[X] = 5$、$\text{Var}(X) = 4$ のとき、$P(|X - 5| \geq 4)$ の上界をチ
 3つの事象 $A, B, C$ について以下の確率が与えられている：
 
 $$P(A) = 0.45, \quad P(A \cup B) = 0.65, \quad P(A \mid B) = 0.5$$
+
 $$P(C) = 0.45, \quad P(A \cap C) = 0.2, \quad P(B \cap C) = 0.1, \quad P(A \cap B \cap C) = 0.05$$
 
 (1) 最初の3つの条件から $P(B)$ を求めよ。
