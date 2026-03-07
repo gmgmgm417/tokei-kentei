@@ -57,7 +57,7 @@
 
 ## 問題 R1-003 (応用) ：原点通過回帰・尤度比検定
 
-> **出典**: 統計検定準1級 2021年6月 第4問（表現を改変）
+> **出典**: 統計検定準1級 類題（表現を改変）
 
 $n$ 次元確率変数 $\mathbf{Y} = (Y_1, \ldots, Y_n)^\top$ が $E(\mathbf{Y}) = b\mathbf{x}$、$V(\mathbf{Y}) = \sigma^2 I_n$ の線形モデルに従うとする。$\mathbf{x} = (x_1, \ldots, x_n)^\top$ は既知の定数ベクトル（各 $x_i \neq 0$）、$b$ と $\sigma^2 (> 0)$ は未知母数。また $\tilde{\mathbf{x}} = (\bar{x}, \ldots, \bar{x})^\top$（$\bar{x} = \frac{1}{n}\sum x_i$）とする。
 
